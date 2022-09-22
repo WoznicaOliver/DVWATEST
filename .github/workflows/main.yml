@@ -18,4 +18,4 @@ jobs:
           project_name: antivirus
           cx_tenant: tylertech
           base_uri: https://ast.checkmarx.net
-          additional_params: --apikey ${{ secrets.CX_API_KEY}} 
+          additional_params: ${{ secrets.CX_API_KEY}} 
