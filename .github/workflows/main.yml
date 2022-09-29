@@ -9,7 +9,7 @@ on:
       
 defaults:
   run:
-    working-directory: config
+    working-directory: vulnerabilities 
     
 jobs:
   build:
