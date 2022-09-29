@@ -6,10 +6,6 @@ on:
       - main
       - master
       - dev
-      
-defaults:
-  run:
-    working-directory: vulnerabilities 
     
 jobs:
   build:
@@ -20,6 +16,7 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
+          working-directory: vulnerabilities 
           project_name: DVWASCAN
           cx_tenant: tylertech
           base_uri: https://ast.checkmarx.net
