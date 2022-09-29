@@ -10,13 +10,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vulnerabilities
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
-          working-directory: vulnerabilities 
           project_name: DVWASCAN
           cx_tenant: tylertech
           base_uri: https://ast.checkmarx.net
