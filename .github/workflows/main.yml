@@ -19,7 +19,7 @@ jobs:
           project_name: DVWASCAN
           cx_tenant: tylertech
           base_uri: https://ast.checkmarx.net
-          additional_params: --apikey ${{ secrets.CX_API_KEY }} --file-filter !readme --report-format sarif --output-name results --sast-filters !**/**,vulnerabilities/**,**/database/**
+          additional_params: --apikey ${{ secrets.CX_API_KEY }} --file-filter !readme --report-format sarif --output-name results
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
