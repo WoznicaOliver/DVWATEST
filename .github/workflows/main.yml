@@ -6,7 +6,6 @@ on:
       - main
       - master
       - dev
-    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,9 +18,4 @@ jobs:
           project_name: DVWASCAN
           cx_tenant: tylertech
           base_uri: https://ast.checkmarx.net
-          additional_params: --apikey ${{ secrets.CX_API_KEY }} --file-filter !readme --report-format sarif --output-name results
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: results.sarif
+          additional_params: --apikey ${{ secrets.CX_API_KEY }}
