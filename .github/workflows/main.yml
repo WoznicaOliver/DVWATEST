@@ -12,14 +12,14 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
           project_name: DVWASCAN
           cx_tenant: tylertech
           base_uri: https://ast.checkmarx.net
-          additional_params: --apikey eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmMDBkMjY0ZS05NGJmLTQ5OTAtYWVkYy0yMGRhODIzNDAzNTYifQ.eyJpYXQiOjE2NjM4NzQ1OTAsImp0aSI6IjVjNzU0MWI1LWJhMTItNGFmYi05ZTM5LTcwNWRmMjYzMjY3NSIsImlzcyI6Imh0dHBzOi8vaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvdHlsZXJ0ZWNoIiwiYXVkIjoiaHR0cHM6Ly9pYW0uY2hlY2ttYXJ4Lm5ldC9hdXRoL3JlYWxtcy90eWxlcnRlY2giLCJzdWIiOiIyNWM3MjEyZC1jYTkwLTQyMTYtODhiMi00Mzg5ZmYyNjMxMTIiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoiYXN0LWFwcCIsInNlc3Npb25fc3RhdGUiOiIwNDgzZDAzOC01YmU3LTQ5ZDEtYjZkMi1hZGZiNDIyODVjYWQiLCJzY29wZSI6IiBvZmZsaW5lX2FjY2VzcyIsInNpZCI6IjA0ODNkMDM4LTViZTctNDlkMS1iNmQyLWFkZmI0MjI4NWNhZCJ9.6WoeRC8CVsokMlU3Q1lszdflYnPXePvqO4CAL7A2h8g --file-source 'dvwa/' --report-format sarif --output-name results
+          additional_params: --apikey eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmMDBkMjY0ZS05NGJmLTQ5OTAtYWVkYy0yMGRhODIzNDAzNTYifQ.eyJpYXQiOjE2NjM4NzQ1OTAsImp0aSI6IjVjNzU0MWI1LWJhMTItNGFmYi05ZTM5LTcwNWRmMjYzMjY3NSIsImlzcyI6Imh0dHBzOi8vaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvdHlsZXJ0ZWNoIiwiYXVkIjoiaHR0cHM6Ly9pYW0uY2hlY2ttYXJ4Lm5ldC9hdXRoL3JlYWxtcy90eWxlcnRlY2giLCJzdWIiOiIyNWM3MjEyZC1jYTkwLTQyMTYtODhiMi00Mzg5ZmYyNjMxMTIiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoiYXN0LWFwcCIsInNlc3Npb25fc3RhdGUiOiIwNDgzZDAzOC01YmU3LTQ5ZDEtYjZkMi1hZGZiNDIyODVjYWQiLCJzY29wZSI6IiBvZmZsaW5lX2FjY2VzcyIsInNpZCI6IjA0ODNkMDM4LTViZTctNDlkMS1iNmQyLWFkZmI0MjI4NWNhZCJ9.6WoeRC8CVsokMlU3Q1lszdflYnPXePvqO4CAL7A2h8g --file-source 'dvwa/includes' --report-format sarif --output-name results
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
