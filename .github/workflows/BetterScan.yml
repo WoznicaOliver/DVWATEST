@@ -1,9 +1,5 @@
 name: Betterscan Scan
-on: 
- pull_request:
-   types: [opened, edited, reopened, review_requested, synchronize]
-   branches:
-      - 'main'
+on: workflow_dispatch
 jobs:
   Betterscan:
     runs-on: ubuntu-latest
