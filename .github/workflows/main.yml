@@ -1,27 +1,21 @@
-# This is a basic workflow to help you get started with Actions
-name: Checkmarx AST Scan
-on:
-  push:
-    branches:
-      - main
-      - master
-      - dev
-    
+name: Betterscan Scan
+on: 
+ pull_request:
+   types: [opened, edited, reopened, review_requested, synchronize]
+   branches:
+      - 'main'
 jobs:
-  build:
-    runs-on: self-hosted
+  Betterscan:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Checkmarx AST CLI Action
-        uses: checkmarx/ast-github-action@main #Github Action version
+      - uses: actions/checkout@v3
         with:
-          project_name: DVWASCAN
-          cx_tenant: tylertech
-          base_uri: https://ast.checkmarx.net
-          additional_params: --apikey eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmMDBkMjY0ZS05NGJmLTQ5OTAtYWVkYy0yMGRhODIzNDAzNTYifQ.eyJpYXQiOjE2NjM4NzQ1OTAsImp0aSI6IjVjNzU0MWI1LWJhMTItNGFmYi05ZTM5LTcwNWRmMjYzMjY3NSIsImlzcyI6Imh0dHBzOi8vaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvdHlsZXJ0ZWNoIiwiYXVkIjoiaHR0cHM6Ly9pYW0uY2hlY2ttYXJ4Lm5ldC9hdXRoL3JlYWxtcy90eWxlcnRlY2giLCJzdWIiOiIyNWM3MjEyZC1jYTkwLTQyMTYtODhiMi00Mzg5ZmYyNjMxMTIiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoiYXN0LWFwcCIsInNlc3Npb25fc3RhdGUiOiIwNDgzZDAzOC01YmU3LTQ5ZDEtYjZkMi1hZGZiNDIyODVjYWQiLCJzY29wZSI6IiBvZmZsaW5lX2FjY2VzcyIsInNpZCI6IjA0ODNkMDM4LTViZTctNDlkMS1iNmQyLWFkZmI0MjI4NWNhZCJ9.6WoeRC8CVsokMlU3Q1lszdflYnPXePvqO4CAL7A2h8g --file-source 'dvwa/includes' --report-format sarif --output-name results
-      - name: Upload SARIF file
+          fetch-depth: 0
+      - name: Betterscan Scan
+        uses: topcodersonline/betterscancustom@v1
+        with:
+         branch: ${{ github.head_ref || github.ref_name }}
+      - name: Upload the SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: results.sarif
+          sarif_file: report.sarif
