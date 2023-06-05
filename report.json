@@ -1,0 +1,163 @@
+[
+    {
+        "hash": "d4047caf03e4e91a8ddb442f3ed473b4",
+        "description": "vmdetect",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "deba50d80cc04dbb6268eba1f76138aa",
+        "description": "vmdetect",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "3a8ee86526eca4c7f86d459c3d6fb518",
+        "description": "vmdetect",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "466a1d8019729b8ab3c0ae67aed736e4",
+        "description": "Big_Numbers1",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "9b03e8d25a1b7284aeb57f85677f2d00",
+        "description": "vmdetect",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "a23ad1ba3c245a9713e4a9e6152af804",
+        "description": "with_sqlite",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "d3890a6e4548ac031419df06e2267eb0",
+        "description": "with_sqlite",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "58dcd67d7e5553cd0796570c1c6c1fe4",
+        "description": "Highentropy",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 40
+    },
+    {
+        "hash": "4820d896a41a056f74ca65a9d925b309",
+        "description": "Detected eval(variable), which could allow a malicious actor to run arbitrary code.\n",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "8d163be3a1f026e97287e1100a0d14ca",
+        "description": "Bracket object notation with user input is present, this might allow an attacker to access all properties of the object and even it's prototype, leading to possible code execution.",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 7
+    },
+    {
+        "hash": "365c82000705402120743c923e31b580",
+        "description": "A variable is present in the filename argument of fs calls, this might allow an attacker to access anything on your system.\n",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 6
+    },
+    {
+        "hash": "74b1e349eaa346e9269ac14ecc92fcad",
+        "description": "RegExp() called with a variable, this might allow an attacker to DOS your application with a long-running regular expression.\n",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 7
+    },
+    {
+        "hash": "0e42e17e9e9554e6aba1ea30d419d345",
+        "description": "Security Misconfiguration",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "57d4e1e57167683871dd25c3fbffcdc1",
+        "description": "Eval Code Injection",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 20
+    },
+    {
+        "hash": "feca3dcbaa7d56e694fd53b4419c8941",
+        "description": "Command Injection",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 21
+    },
+    {
+        "hash": "431109aa6dcb66a950f3d36031bab8e2",
+        "description": "Sql Injection",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 12
+    },
+    {
+        "hash": "123dd96c8c1cd9d5778a772a540b72d7",
+        "description": "Xss",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 345
+    },
+    {
+        "hash": "8c529d17ebfb3a7dbe38ecf8218b05d1",
+        "description": "Path Traversal",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 46
+    },
+    {
+        "hash": "5052e33d61ae68e9bd6b74bec120fd92",
+        "description": "Code Injection",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 169
+    },
+    {
+        "hash": "954579c4b150c276bdbdbb20a4dcada5",
+        "description": "Technical information leak - Print Functions",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 85
+    },
+    {
+        "hash": "8e40a213417f2767f2106e41fe6be9e4",
+        "description": "Ensure top-level permissions are not set to write-all",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 1
+    },
+    {
+        "hash": "c6e5082555dd8a01524558355c93a4ca",
+        "description": "Requests call without timeout",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 32
+    },
+    {
+        "hash": "2f8fc864b68b1e07b7c372b8af66b3c6",
+        "description": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+        "severity": "Warning",
+        "file": "Please upgrade to PRO",
+        "line": 87
+    }
+]
