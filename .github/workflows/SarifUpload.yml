@@ -4,7 +4,8 @@ name: "Upload SARIF"
 # The scheduled workflow runs every Thursday at 15:45 UTC.
 on:
   push:
-    branches: master
+  schedule:
+    - cron: '45 15 * * 4'
 
 jobs:
   build:
@@ -24,6 +25,3 @@ jobs:
         with:
           # Path to SARIF file relative to the root of the repository
           sarif_file: results.sarif
-          # Optional category for the results
-          # Used to differentiate multiple results for one commit
-          category: my-analysis-tool
