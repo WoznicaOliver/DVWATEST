@@ -15,7 +15,7 @@ on:
   schedule:
     - cron: '00 12 * * 2'
 
-permissions: write-all, read-all
+permissions: write-all
 
 jobs:
   psalm:
