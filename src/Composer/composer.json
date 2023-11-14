@@ -16,7 +16,7 @@
 
 	"autoload": {
 		"psr-4": {
-			"ExampleComposer\\": "./src"
+			"ExampleComposer\\": "./vulnerabilities"
 		}
 	},
 
