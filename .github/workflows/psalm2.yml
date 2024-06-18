@@ -1,0 +1,34 @@
+name: Psalm Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  psalm:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0' # Specify your PHP version here
+        extensions: soap   # Ensure SOAP extension is enabled
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: Run Psalm
+      run: vendor/bin/psalm --no-diff --debug-by-line --output-format=checkstyle --report=psalm-report.sarif
+
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: psalm-report.sarif
